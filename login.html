@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SMMPanel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .login-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .login-illustration {
+            flex: 1;
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .logo-text {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .login-illustration img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .login-form-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .login-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-logo h1 {
+            font-size: 2rem;
+            color: #1d4ed8;
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+        }
+
+        .notice {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #eff6ff;
+            border-left: 4px solid #2563eb;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #1e40af;
+        }
+
+        .notice a {
+            color: #1d4ed8;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .notice a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 992px) {
+            .login-illustration {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-illustration">
+            <div>
+                <h1 class="logo-text">SMM<br>Panel</h1>
+                <p style="margin-top: 1rem; opacity: 0.9; font-weight: 300;">Social Media Marketing Platform</p>
+            </div>
+        </div>
+        <div class="login-form-container">
+            <div class="login-form">
+                <div class="login-logo">
+                    <h1>SMMPanel</h1>
+                </div>
+                <form id="loginForm" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-login">Sign In</button>
+                </form>
+                <div class="notice">
+                    <p><strong>Notice:</strong> SMM Panel AI is now part of <a href="https://theytlab.com/" target="_blank" rel="noopener noreferrer">theytlab.com</a>. Please visit our new platform for all your social media marketing needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Prevent form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form submission is intentionally non-functional as per requirements
+        });
+    </script>
+</body>
+</html>
